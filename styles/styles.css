@@ -34,10 +34,10 @@ a{
     text-decoration: none;
     color: inherit;
 }
-li{
+/* header styles */
+.header>nav>ul>li{
     list-style: none;
 }
-/* header styles */
 .header{
     display: flex;
     align-items: center;
@@ -45,7 +45,7 @@ li{
     padding-left: 70px;
     flex-wrap: wrap;
 }
-nav>ul{
+.header>nav>ul{
     display: flex;
     align-items: center;
     padding-right: 70px;
@@ -76,11 +76,34 @@ nav>ul>li:last-child>a{
     text-align: center;
     margin: 0 10%;
 }
+.flower-store{
+    margin-top: 60px;
+    margin-right: 60px;
+}
+.trusted-badge{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.lover-image{
+    position: relative;
+}
 .image-card>button{
     width: 100%;
     background-color: #E95A08;
     border: none;
 }
+.flower-plants-lover{
+    display: flex;
+    margin: 10% 10%;
+    align-items: center;
+}
+.lover-text>h1{
+    padding-left: 30px;
+}
+
 /* media queries */
 @media screen and (max-width: 576px){
     .home, .shop, .about{
