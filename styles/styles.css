@@ -80,31 +80,31 @@ nav>ul>li:last-child>a{
     margin-top: 60px;
     margin-right: 60px;
 }
-.trusted-badge{
-    width: 200px;
-    height: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.lover-image{
-    position: relative;
-}
 .image-card>button{
     width: 100%;
     background-color: #E95A08;
     border: none;
 }
-.flower-plants-lover{
-    display: flex;
-    margin: 10% 10%;
-    align-items: center;
-}
-.lover-text>h1{
-    padding-left: 30px;
-}
+
 
 /* media queries */
+@media screen and (min-width: 577px) {
+    .flower-plants-lover{
+        display: flex;
+        margin: 10% 10%;
+        align-items: center;
+    }
+    .trusted-badge{
+        width: 200px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .lover-image{
+        position: relative;
+    }
+}
 @media screen and (max-width: 576px){
     .home, .shop, .about{
         display: none;
@@ -112,6 +112,13 @@ nav>ul>li:last-child>a{
     .header{
         padding: 0;
         justify-content: space-between;
+    }
+    .header>img{
+        width: 20%;
+        height: auto;
+    }
+    .header>nav{
+        width: 55%;
     }
     nav>ul{
         padding-right: 0;
@@ -130,5 +137,20 @@ nav>ul>li:last-child>a{
     .image-section{
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+    .flower-plants-lover{
+        display: block;
+        margin: 0;
+    }
+    .lover-image>img{
+        width: 100%;
+    }
+    .trusted-badge{
+        display: none;
+    }  
+    .flower-store{
+        margin: 0;
+        margin-top: 10%;
+        width: 100%;
     }
 }
