@@ -85,10 +85,142 @@ nav>ul>li:last-child>a{
     background-color: #E95A08;
     border: none;
 }
-
+.deals{
+    margin: 0 10%;
+    text-align: center;
+}
+.deals-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    text-align: center;
+    gap: 20px;
+}
+.deal-card{
+    margin-top:10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    color: white;
+}
+.deal-card h3{
+    text-decoration: underline;
+}
+.bloom{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/deal-bloom.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ana{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/deal-ana.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+.zabo{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/deal-zabo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-row: span 2;
+}
+/* footer styles */
+.email{
+    margin-top: 12%;
+    height: 300px;
+    background-image: url(../assets/news-letter-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 60%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input[type="email"]{
+    width: 50%;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+}
+form button{
+    height: 100%;
+    margin: 0;
+    border: none;
+    background-color: #E95A08;
+    color: white;
+    padding: 0 20px;
+    border-radius: 0 5px 5px 0;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 10%;
+    background-color: #f8f8f8;
+}
+.footer-image{
+    flex: 1;
+    margin-right: 40px;
+}
+.footer-image img{
+    width: 150px;
+    margin-bottom: 20px;
+}
+.footer-links{
+    flex: 1;
+    margin-right: 40px;
+}
+.footer-links ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+.footer-links li{
+    margin-bottom: 15px;
+}
+.footer-links a{
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-links a:hover{
+    color: #E95A08;
+}
+.footer-logo{
+    flex: 1;
+    display: flex;
+    gap: 15px;
+}
+.footer-logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
 
 /* media queries */
 @media screen and (min-width: 577px) {
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
     .flower-plants-lover{
         display: flex;
         margin: 10% 10%;
@@ -103,6 +235,15 @@ nav>ul>li:last-child>a{
     }
     .lover-image{
         position: relative;
+    }
+    .lover-text>ul{
+        padding-left: 20px;
+    }
+    .lover-text>ul>li{
+        margin-top: 20px;
+    }
+    .trusted-badge:hover{
+        animation: spin 10s linear infinite;
     }
 }
 @media screen and (max-width: 576px){
@@ -152,5 +293,34 @@ nav>ul>li:last-child>a{
         margin: 0;
         margin-top: 10%;
         width: 100%;
+    }
+    .deals-section{
+        display: block;
+    }
+    
+    /* footer mobile styles */
+    .footer-content{
+        flex-direction: column;
+        padding: 40px 5%;
+        gap: 30px;
+    }
+    .footer-image{
+        margin-right: 0;
+        text-align: left;
+    }
+    .footer-image img{
+        width: 120px;
+        margin: 0 auto 15px;
+    }
+    .footer-links{
+        margin-right: 0;
+        text-align: left;
+    }
+    .footer-links ul{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .footer-logo{
+        justify-content: center;
     }
 }
